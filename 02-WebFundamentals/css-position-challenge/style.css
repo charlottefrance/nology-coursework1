@@ -1,23 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
 body {
     background-color: white;
     margin: auto;
 }
 
-header {
+h1, h2 {
+    font-size: 35px;
+    height: 60px;
     text-align: center;
-    height: 80px;
-    color: gray;
+    text-decoration: underline;
 }
 
-* {
-    text-align: center;
-    font-size: 20px;
+.german {
+    position: relative;
+    height: 250px;
+    width: 400px;
+    padding: 0px;
+    background-color: white;
+    box-shadow: 2.5px 2.5px 5px 5px lightgray;
 }
 
-header h2 {
-    font-size: 60px;
+.hungarian {
+    position: absolute;
+    top: 60px;
+    left: 654px;
+    height: 250px;
+    width: 400px;
+    opacity: 0;
 }
 
-header h1 {
-    font-size: 60px;
+.hungarian:hover {
+    opacity: 1;
+    transition: ease 0.3s;
+}
+
+.french {
+    position: relative;
+    height: 250px;
+    width: 400px;
+    padding: 0px;
+    background-color: white;
+    box-shadow: 2.5px 2.5px 5px 5px lightgray;   
+}
+
+.irish {
+    position: absolute;
+    top: 395px;
+    left: 654px;
+    height: 250px;
+    width: 400px;
+    opacity: 0;
+}
+
+.irish:hover {
+    opacity: 1;
+    transition: ease 0.3s;
 }
