@@ -88,6 +88,11 @@ a:visited {
   vertical-align: top;
 }
 
+.bottom-copyright {
+  color: #fafafa;
+  font-size: 20px;
+}
+
 .ending {
   text-align: center;
 }

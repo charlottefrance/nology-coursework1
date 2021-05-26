@@ -11,7 +11,7 @@
   font-family: $font-display;
   font-size: 20px;
   color: $color-white;
-  }
+}
 
 .year {
   font-sizE: 20px;
@@ -78,6 +78,11 @@
   .bottom-wave {
     background-color: $color-primary;
     vertical-align: top;
+  }
+
+  .bottom-copyright {
+    color: $color-white;
+    font-size: 20px;
   }
 
   .ending {
