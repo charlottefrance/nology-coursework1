@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.navigation {
+  height: 10vh;
+  background-color: #28527a;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo, .bottom-logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  color: #fafafa;
+}
+
+.year {
+  font-sizE: 20px;
+  color: #fafafa;
+}
+
+.button {
+  display: block;
+  width: 100px;
+  background-color: #f0a500;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fafafa;
+  margin: 0 auto;
+}
+.button--form {
+  width: 100%;
+  background-color: #55a5f0;
+  border: none;
+}
+.button--ending {
+  background-color: #fafafa;
+  color: #28527a;
+  border: 3px solid;
+}
+
+.intro {
+  text-align: center;
+}
+.intro__heading {
+  color: #28527a;
+  font-size: 50px;
+}
+.intro__sub-heading {
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+  margin: 20px 0;
+}
+.intro __button {
+  margin: 0 auto;
+}
+
+.wave {
+  vertical-align: top;
+}
+
+.form {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.form__input {
+  margin-bottom: 20px;
+}
+
+.bottom-wave {
+  background-color: #28527a;
+  vertical-align: top;
+}
+
+.bottom-copyright {
+  color: #fafafa;
+  font-size: 20px;
+}
+
+.ending {
+  text-align: center;
+}
+.ending__heading {
+  color: #333333;
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+}
+
+.footer {
+  height: 10vh;
+  background-color: #28527a;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  height: 50vh;
+  background-color: #28527a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom {
+  background-color: #fafafa;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
