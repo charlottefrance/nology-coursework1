@@ -37,11 +37,12 @@
         display: flex;
         width: 400px;
         height: 500px;
-        border: 1px solid gray;
+        border: 1px solid #cfcfcf;
         border-radius: 5px;
         text-align: center;
         padding: 20px;
         background-color: #fafafa;
+        box-shadow: 2px 2px 2px 2px #cfcfcf;
 
         #hidden {
             position: absolute;
@@ -85,5 +86,29 @@
 #four {
     position: absolute;
     top: 1400px;
+    left: 1360px;
+}
+
+#five {
+    position: absolute;
+    top: 2000px;
+    left: 40px;
+}
+
+#six {
+    position: absolute;
+    top: 2000px;
+    left: 480px;
+}
+
+#seven {
+    position: absolute;
+    top: 2000px;
+    left: 920px;
+}
+
+#eight {
+    position: absolute;
+    top: 2000px;
     left: 1360px;
 }
