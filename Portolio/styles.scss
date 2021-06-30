@@ -1,0 +1,114 @@
+.opening {
+    height: 1200px;
+    width: 100%;
+    position: absolute;
+    background-image: url(./images/computer.png.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .header {
+        position: absolute;
+        width: 600px;
+        top: 440px;
+        left: 1020px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 65px;
+        text-align: center;
+        font-weight:800;
+    }
+
+    .sub {
+        position: absolute;
+        width: 600px;
+        top: 500px;
+        left: 1050px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 65px;
+    }
+}
+
+.main {
+    background-color: #000000;
+    height: 3500px;
+    font-size: 30px;
+    color: #000000;
+
+    .cards {
+        display: flex;
+        width: 400px;
+        height: 500px;
+        border: 1px solid #cfcfcf;
+        border-radius: 5px;
+        text-align: center;
+        padding: 20px;
+        background-color: #fafafa;
+        box-shadow: 2px 2px 2px 2px #cfcfcf;
+
+        #hidden {
+            position: absolute;
+            opacity: 0;
+        }
+
+        #shown {
+            opacity: 1;
+        }
+    }
+    .cards:hover {
+        background-color: #cfcfcf;
+        #hidden {
+            opacity: 1;
+        }
+
+        #shown {
+            opacity: 0;
+        }
+    }
+}
+
+#one {
+    position: absolute;
+    top: 1400px;
+    left: 40px;
+}
+
+#two {
+    position: absolute;
+    top: 1400px;
+    left: 480px;
+}
+
+#three {
+    position: absolute;
+    top: 1400px;
+    left: 920px;
+}
+
+#four {
+    position: absolute;
+    top: 1400px;
+    left: 1360px;
+}
+
+#five {
+    position: absolute;
+    top: 2000px;
+    left: 40px;
+}
+
+#six {
+    position: absolute;
+    top: 2000px;
+    left: 480px;
+}
+
+#seven {
+    position: absolute;
+    top: 2000px;
+    left: 920px;
+}
+
+#eight {
+    position: absolute;
+    top: 2000px;
+    left: 1360px;
+}
