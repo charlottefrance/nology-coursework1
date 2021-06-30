@@ -15,14 +15,15 @@
    <script src="https://kit.fontawesome.com/03ca331b50.js" crossorigin="anonymous"></script>
  </head>
  <body>
+   <div class="body">
    <div class="heading">
-     <h1 class="button">Home</h1>
-     <h2 class="button">About</h2>
-     <h3 class="button">Projects</h3>
-     <h4 class="button">Contact me</h4>
+     <h1 class="button"><a class="button" href="#opening">Home</a></h1>
+     <h2 class="button"><a class="button" href="#circle">About</a><a class="clicker" href="#circle"><i id="clicker" class="fas fa-mouse-pointer"></i></a></h2>
+     <h3 class="button"><a class="button" href="#one">Projects</a></h3>
+     <h4 class="button"><a class="button" href="#contact">Contact me</a></h4>
    </div>
 
-   <div class="opening">
+   <div id="opening" class="opening">
      <p class="header">Charlotte France</p>
      <p class="sub">Software Developer</p>
 
@@ -34,43 +35,47 @@
     </p>
   </div>
      <div class="scroll-down">
-       <p>Scroll down</p><a class="arrow"><i class="fas fa-arrow-circle-down"></i></a>
+       <p>Scroll down</p><a href="#one" class="arrow"><i class="fas fa-arrow-circle-down"></i></a>
      </div>
    </div>
    
+   <div class="under">
+    <div id="1">
+       <div id="hiding" class="cards">
+       <img class="pictures" src="./images/flags.PNG" ></img>
+       </div>
+    </div>
+    <div id="2">
+       <div id="hiding" class="cards"></div>
+       <img class="pictures" src="./images/bearsbakery.PNG"></img>
+    </div>
+    <div id="3">
+       <div id="hiding" class="cards"></div>
+    </div>
+    <div id="4">
+        <div id="hiding" class="cards"></div>
+    </div>
+  </div>
+   
    <div class="main">
-     <div id="one" class="cards">
-       <p id="shown">This is where i will display information! Hover over me !!</p>
-       <p id="hidden">This is where i will show the project</p>
-     </div>
-     <div id="two" class="cards">
-       <p id="shown">This is where i will display information!</p>
-       <p id="hidden">This is where i will show the project</p>
-     </div>
-     <div id="three" class="cards">
-       <p id="shown">This is where i will display information!</p>
-       <p id="hidden">This is where i will show the project</p>
-     </div>
-     <div id="four" class="cards">
-       <p id="shown">This is where i will display information!</p>
-       <p id="hidden">This is where i will show the project</p>
-     </div>
-     <div id="five" class="cards">
-       <p id="shown">This is where i will display information!</p>
-       <p id="hidden">This is where i will show the project</p>
-     </div>
-     <div id="six" class="cards">
-       <p id="shown">This is where i will display information!</p>
-       <p id="hidden">This is where i will show the project</p>
-     </div>
-     <div id="seven" class="cards">
-       <p id="shown">This is where i will display information!</p>
-       <p id="hidden">This is where i will show the project</p>
-     </div>
-     <div id="eight" class="cards">
-       <p id="shown">This is where i will display information!</p>
-       <p id="hidden">This is where i will show the project</p>
-     </div>
+    <div id="one" class="cards">
+      <p id="shown">The Flags</p>
+    </div>
+   <div id="two" class="cards">
+      <p id="shown">Bears Bakery</p>
+    </div>
+    <div id="three" class="cards">
+      <p id="shown">Example</p>
+    </div>
+    <div id="four" class="cards">
+      <p id="shown">Example</p>
+    </div>
+
+   <div class="logo" id="contact">
+      <a href="https://github.com/charlottefrance" target="blank_"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fas fa-envelope-open-text"></i></a>
+      </div>
+   </div>
    </div>
  </body>
 </html>
