@@ -51,8 +51,8 @@
         #circle {
             position: absolute;
             color:#000000;
-            top: 181px;
-            left: 924px;
+            top: 15.2%;
+            left: 51.35%;
             font-size: 775px;
         }
 
@@ -135,6 +135,7 @@
     position: absolute;
     display:flex;
     justify-content: space-between;
+    flex: wrap;
     padding: 20vh;
 
     .pictures {
