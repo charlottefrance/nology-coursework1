@@ -51,4 +51,3 @@ const highScores = scores.filter((score) => {
     //     return false;
     // };
 })
-console.log(highScores)

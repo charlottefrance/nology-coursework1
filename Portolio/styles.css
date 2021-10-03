@@ -54,8 +54,13 @@
 .opening .about #circle {
   position: absolute;
   color: #000000;
+<<<<<<< HEAD
   top: 15.2%;
   left: 51.35%;
+=======
+  top: 181px;
+  left: 924px;
+>>>>>>> 8413529f44e07efdb7c12cc7f4ab8a76617dfa58
   font-size: 775px;
 }
 .opening .about #about-me {
