@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        .valid{
+            background-color: lightgreen;
+            border: 5px solid green;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1 onmouseover="alert('Mouse over')">This is my heading</h1>
+    <button onclick="alert('i was clicked')">CLick me!</button>
+    <form action="">
+        <input onfocus="alert('i was focused')" type="text">
+    </form> -->
+
+    <h1 id="heading">Hello</h1>
+    <button id="button">Click me</button>
+    <form action="">
+        <input type="text" class="text-input">
+        <input type="text" class="test-input">
+    </form>
+    <script>
+        // console.log(document.getElementById("heading"));
+
+        // GETTING A HTML ELEMENT REFERENCE 
+        const heading = document.getElementById("heading");
+        const button = document.getElementById("button");
+
+        // GETITNG MULTIPLE ELEMENTS
+        const textInputs = document.getElementById("text-input");
+
+        // const itemIWantToLog = document.querySelector('#heading');
+        // console.dir(itemIWantToLog);
+
+        // heading.innerHTML = "Javascript <span>did this</span>"
+
+        // const otherItemToLog = document.querySelector('#button')
+        // console.dir(otherItemToLog)
+
+        // button.style.backgroundColor = "green";
+        // button.innerHTML = "Clicked :)"
+
+        console.log(textInputs);
+        
+    
+        // htmlElement.addEventListener("event", () => {
+        //     ... do something
+        // }) 
+
+        heading.addEventListener("mouseover", () => {
+            heading.innerHTML = "Javascript did this"
+        })
+
+        heading.addEventListener("mouseout", () => {
+            heading.innerHTML = "Hello"
+        })
+
+        button.addEventListener("click", () => {
+            button.innerHTML = "Clicked :)"
+            button.style.backgroundColor = "green";
+        })
+
+        textInputs[0].addEventListener("focus", () => {
+            textInputs[0].classList.add("valid");
+        })
+
+        textInputs[1].addEventListener("focus", (event) => {
+            console.log(event);
+        })
+    </script>
+
+</body>
+</html>
