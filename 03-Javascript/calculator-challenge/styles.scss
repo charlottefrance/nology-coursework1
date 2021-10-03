@@ -1,44 +1,61 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+  * {
+      padding: 0;
+      margin: 5;
+  }
+  
+  body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #daebe8;
+        font-family: sans-serif;
+      
+      .calculator {
+          width: 300px;
+          padding: 20px;
+          background-color: #87bdd8;
+          border-radius: 5px;
+          box-shadow: 10px 10px 10px -10px;
+  
+          .display {
+              height: 45px;
+              width: 100%;
+              font-size: 30px;
+              align-items: center;
+              background-color: #d9ecd0;
+              border: none;
+              border-radius: 10px;
+          }
+  
+          .row {
+              display: flex;
+              justify-content: space-between;
+          }
+  
+          button {
+              height: 60px;
+              width: 65px;
+              background-color: #d9ecd0;
+              border: none;
+              border-radius: 10px;
+              font-style: bold;
+              font-size: 30px;
+              margin: 10px;
+            }
 
-body {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+          button:hover {
+                cursor: pointer;
+                background-color: #fafafa;
+          }
 
-    .calculator {
-        height: 40vh;
-        width: 30vh;
-    
-        .display {
-            height: 10%;
-            width: 30vh;
-            font-size: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        .row {
-            display: flex;
-            justify-content: center;
-            padding: 2px;
-        }
-    
-        button {
-            width: 60px;
-            font-style: bold;
-            font-size: 30px;
-            height: 50px;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-    }
-}
+          .operator {
+              background-color: #e0e2e4;
+          }
 
-
+      }
+  }
+  
 
 
