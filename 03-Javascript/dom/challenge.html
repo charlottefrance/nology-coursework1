@@ -10,15 +10,44 @@
       h5 {
         font-family: "Poppins";
       }
+
       * {
         font-family: "Lato";
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        font-style: bold;
       }
+
+      #welcome-title {
+        font-size:larger;
+      }
+
+      #register {
+        font-size: larger;
+      }
+
       .valid {
-        border: 1px solid green;
+        border: 4px solid green;
       }
       .invalid {
-        border: 1px solid red;
+        border: 4px solid red;
       }
+
+      #error {
+        background: red;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        display: none;
+        width: 200px;
+        margin-top: 5px;
+      }
+      .show {
+        display: block !important;
+        margin: auto;
+      }
+    
     </style>
   </head>
   <body>
@@ -31,17 +60,20 @@
 
       <!-- Register your interest -->
       <section id="contact">
-        <h3>Register your interest!</h3>
+        <h3 id="register">Register your interest!</h3>
         <form>
           <div class="form-group">
             <label class="form-label">Name</label>
             <input class="form-input"/>
           </div>
           <div class="form-group">
-            <label class="form-label">Email</label>
+            <label class="form-label">Email  </label>
             <input class="form-input" />
           </div>
-          <button onclick="hangleRegister()">Send</button>
+
+          <button id="button" onclick="handleRegister(event)">Send</button>
+
+          <div id="error">Oops something went wrong here</div>
         </form>
       </section>
     </main>
@@ -55,18 +87,42 @@
 
       // 2. Add an 'active' class to first form-input
       let formInputs = document.getElementsByClassName("form-input");
-      formInputs[0].classList.add("active");
+      formInputs[0] && formInputs[1].classList.add("active");
+      
+
 
       // 3. Create a handleRegister function to run when the form is submitted, a simple pop please.
-      const hangleRegister = () => {
-          alert("Your form has been submitted!")
-      }
+      const handleRegister = (event) => {
+        // 3.1 Stop the form from submitting
+        event.preventDefault();
+        // 3.2 Display a success if the form valid
+        const errorMsg = document.getElementById("error-message");
+        if (formInputs[0].value && formInputs[1].value) {
+          errorMsg.classList.remove("show");
+          alert("You have registered");
+          welcomeElement.innerHTML = "Thank you for registering";
+        } else {
+          errorMsg.classList.add("show");
+        }
+      };
       // 4. Create a handleInputChange function to validate the input
          // Can you add the class 'valid' if it has a value?​
          // Can you  add the 'invalid' class if it does not?
        
        
        formInputs[0].addEventListener("input", (event) => {
+           let inputValue = event.target.value;
+
+           if (inputValue != undefined && inputValue.length > 0) {
+               event.target.classList.remove("invalid");
+               event.target.classList.add("valid");
+           } else {
+               event.target.classList.remove("valid");
+               event.target.classList.add("invalid");
+           }
+       }) 
+
+       formInputs[1].addEventListener("input", (event) => {
            let inputValue = event.target.value;
 
            if (inputValue != undefined && inputValue.length > 0) {
