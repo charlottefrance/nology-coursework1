@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,4 +45,52 @@
         });
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        section {
+            padding: 100px;
+            border: 2px solid pink;
+        }
+
+        form {
+            padding: 20px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form action="">
+            <button>Click me</button>
+        </form>
+    </section>
+
+    <script>
+        const section = document.querySelector("section");
+        const form = document.querySelector("form");
+        const button = document.querySelector("button");
+
+        section.addEventListener("click", () => {
+            alert("This is from the section");
+        });
+        
+        form.addEventListener("click", (event) => {
+            event.stopPropagation();
+            alert("This is from the form");
+        });
+
+        button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            alert("This is from the button");
+        });
+    </script>
+</body>
+>>>>>>> 1cb7b737bad787f207680c6cc19e57e79bf59357
 </html>
