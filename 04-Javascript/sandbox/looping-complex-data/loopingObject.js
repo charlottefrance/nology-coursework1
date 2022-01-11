@@ -29,16 +29,16 @@ const invalidMessage = {
 
 // THE SOLUTION
 
-const validateMessageObject = (messageObject) => {
-    for(let key in messageObject) {
-        const typeCheck = typeof messageObject[key] !== "string";
+// const validateMessageObject = (messageObject) => {
+//     for(let key in messageObject) {
+//         const typeCheck = typeof messageObject[key] !== "string";
         
-        if(typeCheck) {
-            return false;
-        }
-    }
-    return true;
-};
+//         if(typeCheck) {
+//             return false;
+//         }
+//     }
+//     return true;
+// };
 
 // console.log(validateMessageObject(validMessage));
 // console.log(validateMessageObject(invalidMessage));
@@ -102,3 +102,31 @@ const validateMessageKeys = (messageObject) => {
 // console.log(validateMessageKeys(validMessage));
 // console.log(validateMessageKeys(invalidMessage));
 
+const validMessageEntries = Object.entries(validMessage);
+const invalidMessageEntries = Object.entries(invalidMessage);
+
+console.log(validMessageEntries);
+console.log(invalidMessageEntries);
+
+
+const validateMessageObject = (messageObject) => {
+    const objectEntries = Object.entries(messageObject);
+
+    const validation = objectEntries.every((entry) => {
+        const key = entry[0];
+        const value = entry[1];
+
+        //Check the type of value
+        const typeCheck = typeof value === "string";
+        //Check key is valid
+        const validKeys = ["userName", "content"];
+        const keyCheck = validKeys.includes(key);
+
+        return typeCheck && keyCheck;
+    });
+
+    return validation;
+};
+
+console.log(validateMessageObject(validMessage));
+console.log(validateMessageObject(invalidMessage));
