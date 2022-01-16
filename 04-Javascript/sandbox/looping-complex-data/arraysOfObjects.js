@@ -56,9 +56,12 @@ const fruitObjectArray = [
 
 const generateFruitHTML = (fruitArray) => {
     const html = fruitArray.map(fruitObject => {
+        const price = (fruitObject.price / 100).toFixed(2);
+        const capitalise = fruitObject.fruit[0].toUpperCase() + fruitObject.fruit.slice(1);
+
         const cardHtml = `
         <div>
-            <h3> ${fruitObject.fruit} </h3>
+            <h3> ${capitalise} </h3>
             <p>This fruit is ${fruitObject.rating} / 10 </p>
             <p>Buy now for ${fruitObject.price}p</p>
         </div>
@@ -69,4 +72,10 @@ const generateFruitHTML = (fruitArray) => {
     return html.join("");
 };
 
-console.log(generateFruitHTML(fruitObjectArray));
+
+const sortedByHighestRating = fruitObjectArray.sort((a, b) => {
+    return b.rating - a.rating;
+});
+
+console.log(sortedByHighestRating);
+console.log(generateFruitHTML(sortedByHighestRating));
