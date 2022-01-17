@@ -1,3 +1,3 @@
 export const getName = (name, age) => {
-    return `${name}, ${age} years old.`
+    return `${name}, ${age} years old`
 };
