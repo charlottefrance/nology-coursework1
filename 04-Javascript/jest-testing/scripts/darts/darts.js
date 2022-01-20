@@ -1,4 +1,7 @@
 export const findScore = (x, y) => {
+
+    if(Number.isNaN(Number(x)) || Number.isNaN(Number(y))) return null;
+    
     const distanceToDart = Math.sqrt((x * x) + (y * y));
 
     // distance to target
