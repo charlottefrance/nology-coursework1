@@ -32,10 +32,22 @@
 
 // https://api.punkapi.com/v2/beers/random
 
+const beerName = document.querySelector(".beer-name")
+const tagline = document.querySelector(".tagline")
+const description = document.querySelector(".description")
+const abv = document.querySelector(".abv")
+const foodPair = document.querySelector(".food-pair")
+
 const getRandomBeer = () => {
     fetch('https://api.punkapi.com/v2/beers/random')
         .then(res => res.json())
-        .then(json => console.log(json))
+        .then(json => {
+            beerName.innerHTML = json[0].name
+            tagline.innerHTML = json[0].tagline
+            description.innerHTML = json[0].description
+            abv.innerHTML = json[0].abv
+            foodPair.innerHTML = json[0].food_pairing[0]
+        })
         .catch(err => console.log(err))
 }
 

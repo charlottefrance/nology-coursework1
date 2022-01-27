@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin-top: 20px;
+  background-color: whitesmoke;
+  width: 50vh;
+  height: 60vh;
+  border: 2px solid gray;
+  box-shadow: 5px 5px 5px 5px lightgray;
+}
+
+main {
+  color: black;
+  text-align: center;
+  padding: 25px;
+}
+main h1 {
+  padding: 10px;
+  font-size: 50px;
+}
+main h4 {
+  padding: 10px;
+  font-size: 20px;
+}
+main p {
+  padding: 10px;
+  font-size: 25px;
+}
