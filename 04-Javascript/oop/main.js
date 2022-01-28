@@ -27,23 +27,64 @@
 // console.log(mag1.getSummary())
 
 //Done alone
-class Employee {
-    constructor(name, rating, grade, nextGrade) {
-        this.name = name;
-        this.rating = rating;
-        this.grade = grade;
-        this.nextGrade = nextGrade;
+// class Employee {
+//     constructor(name, rating, grade, nextGrade) {
+//         this.name = name;
+//         this.rating = rating;
+//         this.grade = grade;
+//         this.nextGrade = nextGrade;
+//     }
+
+//     willTheyBePromoted() {
+//         if(this.rating >= 7) {
+//         return `${this.name} is ready to be promoted to ${this.nextGrade}`;
+//         } else {
+//         return `${this.name}, is not ready for ${this.nextGrade}, but they're great at ${this.grade} :)`
+//         }
+//     };
+    
+// }
+
+// const employee1 = new Employee("Charlotte", 6, "Customer Service Assistant", "Team Leader");
+// const employee2 = new Employee("Luke", 10, "Store Manager", "Area Manager")
+// console.log(employee1.willTheyBePromoted())
+// console.log(employee2.willTheyBePromoted())
+
+//Challenge 2
+ class Vehicle {
+     constructor(name, year, speed) {
+         this.name = name;
+         this.year = year;
+         this.speed = speed;
+     }
+
+     speed() {
+         return `${this.name} is moving at ${this.speed}mph`;
+     }
+ }
+
+ class Car extends Vehicle {
+    constructor(name, year, type, gears, doors) {
+        super(name, year);
+        this.type = type;
+        this.gears = gears;
+        this.doors = doors;
     }
 
-    willTheyBePromoted() {
-        if(this.rating >= 7) {
-        return `${this.name} is ready to be promoted to ${this.nextGrade}`;
-        } else {
-        return `${this.name}, is not ready for ${this.nextGrade}, but they're great at ${this.grade} :)`
-        }
-    };
-    
-}
+    changeGear() {
+        return `${this.type} is has now changed its gear to ${this.gears}`
+    }
+ }
 
-const employee1 = new Employee("Charlotte", 8, "Manager", "Area Manager");
-console.log(employee1.willTheyBePromoted())
+ class Ford extends Car {
+     constuctor(year, doors, price, resalePrice) {
+         super(year, doors);
+         this.price = price;
+     }
+
+     resaleValue() {
+         return `Ford cars are so popular because of the resale possibilitys, for example, this ${this.year} ${this.year} Ford, was bought for ${this.price} and sold for ${this.resalePrice} `
+     }
+ }
+
+ //next time, do something that changes throughout each class, like in Module 4, Entending Classes Challende & Review videos
