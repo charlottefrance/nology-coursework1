@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 20px;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;;
+}
+
+input {
+    height: 25px;
+    font-size: 20px;
+}
