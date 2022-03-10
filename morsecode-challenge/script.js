@@ -23,7 +23,8 @@ const englishToMorse = {
     "W" : "._ _",
     "X" : "_.._",
     "Y" : "_._ _",
-    "Z" : "_ _.."
+    "Z" : "_ _..",
+    "/" : " ",
 }
 
 const morseToEnglish = {
@@ -52,22 +53,43 @@ const morseToEnglish = {
     "_.._" : "X",
     "_._ _" : "Y",
     "_ _.." : "Z",
+    "/" : " ",
 }
 
-translateToEnglish = (str) => {
-    return str.toUpperCase().split("").map(el => {
+toMorseCode = (str) => {
+    morseCodeWord = 
+    str.toUpperCase().split("").map(el => {
         return englishToMorse[el] ? englishToMorse[el] : el;
-    }).join("");
-};
+     }).join("/");
+    return morseCodeWord;
+}
 
-translateToMorseCode = (str) => {
-    return str.toUpperCase().split("").map(el => {
+toEnglish = (str) => {
+    englishWord =
+    str.toUpperCase().split("").map(el => {
         return morseToEnglish[el] ? morseToEnglish[el] : el;
     }).join("");
+    return englishWord;
 }
 
-console.log(translateToEnglish('hello'))
-console.log(translateToMorseCode('......_..._.._ _ _'))
+
+console.log(toMorseCode("hello"))
+console.log(toEnglish("...././._../._../_ _ _"))
+
+// translateToEnglish = (event) => {
+//     toEnglish = event.target.value;
+
+//     if(toEnglish.contains(".")) {
+//         alert("${toEnglish()}")
+//     };
+// }
+
+// translateToMorseCode = (str) => {
+//     return str.toUpperCase().split("").map(el => {
+//         return morseToEnglish[el] ? morseToEnglish[el] : el;
+//     }).join(" ");
+// }
+
 // class MorseCode {
 //     constructor(englishWord, morsecodeWord) {
 //         this.englishWord = englishWord;
