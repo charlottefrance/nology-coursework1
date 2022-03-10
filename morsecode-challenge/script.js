@@ -76,30 +76,21 @@ toEnglish = (str) => {
 console.log(toMorseCode("hello"))
 console.log(toEnglish("...././._../._../_ _ _"))
 
-// translateToEnglish = (event) => {
-//     toEnglish = event.target.value;
+translateToEnglish = (event) => {
+    toEnglish = event.target.value;
 
-//     if(toEnglish.contains(".")) {
-//         alert("${toEnglish()}")
-//     };
-// }
+    if(toEnglish === toEnglish) {
+        alert(toEnglish)
+    } else {
+        alert("Not recognised")
+    }
+}
 
-// translateToMorseCode = (str) => {
-//     return str.toUpperCase().split("").map(el => {
-//         return morseToEnglish[el] ? morseToEnglish[el] : el;
-//     }).join(" ");
-// }
+translateToMorseCode = (str) => {
+    return str.toUpperCase().split("").map(el => {
+        return morseToEnglish[el] ? morseToEnglish[el] : el;
+    }).join(" ");
+}
 
-// class MorseCode {
-//     constructor(englishWord, morsecodeWord) {
-//         this.englishWord = englishWord;
-//         this.morsecodeWord = morsecodeWord;
-//     }
 
-//     translateToEnglish(str) {
-//         return str.toUpperCase().split("").map(el => {
-//             return englishToMorse[el] ? englishToMorse[el] : el;
-//         }).join("");
-//     };
-// }
 
